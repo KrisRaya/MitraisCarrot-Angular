@@ -1,0 +1,27 @@
+<!-- <div>
+  <span>Id : {{user.id}} </span> <br>
+  <span>Name : {{user.name}}</span> <br>
+  <span>Email : {{user.email}}</span>
+</div>
+<br>
+<div *ngIf="user">
+  <label>Name : <input [(ngModel)]="user.name" placeholder="Name"> </label> <br>
+  <label>Email : <input [(ngModel)]="user.email" placeholder="Email"> </label>
+</div> -->
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Option</th>
+  </tr>
+  <tr *ngFor="let user of users" [class.selected]="user === selectedUser">
+    <th>{{user.id}}</th>
+    <th>{{user.name}}</th>
+    <th>{{user.email}}</th>
+    <span > <th> <img class="option" src="../../assets/show.png " (click)="onselect(user)"/></th></span>
+  </tr>
+</table>
+
+<app-employeeDetail [user]="selectedUser"></app-employeeDetail>

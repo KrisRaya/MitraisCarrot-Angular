@@ -1,0 +1,27 @@
+<!-- <div>
+  <h2>Detail User</h2>
+  <span>Id : {{user.id}} </span> <br>
+  <span>Name : {{user.name}}</span> <br>
+  <span>Email : {{user.email}}</span>
+</div>
+<br>
+
+<div *ngIf="user">
+  <label>Name : <input [(ngModel)]="user.name" placeholder="Name"> </label> <br>
+  <label>Email : <input [(ngModel)]="user.email" placeholder="Email"> </label>
+</div> -->
+
+<div *ngIf="user">
+
+    <h2>{{ user.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{user.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="user.name" placeholder="name">
+      </label><br>
+      <label>email:
+          <input [(ngModel)]="user.email" placeholder="email">
+        </label>
+    </div>
+  
+  </div>

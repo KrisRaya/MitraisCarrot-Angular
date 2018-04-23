@@ -1,0 +1,18 @@
+/* td, th, label {
+    border: 0px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+} */
+label {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.user .text {
+    position: relative;
+    top: -3px;
+  }
+  .selected {
+    background-color: #CFD8DC !important;
+    color: white;
+  }
