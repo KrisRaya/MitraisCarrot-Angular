@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import { Users } from '../mockdata';
-import { NgIf } from '@angular/common';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-employeeList',
@@ -9,14 +8,19 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeListComponent implements OnInit {
-  users= Users;
+  users: User[];
   selectedUser: User;
   onselect(user: User): void{
     this.selectedUser = user;
   }
-  constructor() { }
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
+    this.getEmployees();
+  }
+  getEmployees(): void{
+    this.employeeService.getEmployees().subscribe(users=>this.users=users);
+
   }
 
 }
