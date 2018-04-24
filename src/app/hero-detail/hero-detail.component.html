@@ -6,8 +6,11 @@
       <label>name:
         <input [(ngModel)]="hero.name" placeholder="name"/>
       </label>
+      <label><br>email:
+          <input [(ngModel)]="hero.email" placeholder="email"/>
+        </label>
     </div>
-    <div *ngIf="hero.gender==='f'"><span>Gender: </span>Female</div>
-    <div *ngIf="hero.gender==='m'"><span>Gender: </span>Male</div>
+ 
     <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
   </div>
