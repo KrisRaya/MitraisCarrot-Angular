@@ -1,0 +1,18 @@
+h2{
+    margin: 0 auto;
+    width: max-content;
+}
+
+div{
+    margin: 10px auto;
+    
+    width: 50%;
+}
+
+button{
+    margin-left:50%;
+    margin-right:50%;
+    /* position: relative; */
+    width: max-content;
+
+}
