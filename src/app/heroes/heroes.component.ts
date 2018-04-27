@@ -30,6 +30,14 @@ export class HeroesComponent implements OnInit {
         this.heroes.push(hero);
       });
   }
+  addEmail(email: string): void {
+    email = email.trim();
+    if (!email) { return; }
+    this.heroService.addHero({ email } as Hero)
+      .subscribe(hero => {
+        this.heroes.push(hero);
+      });
+  }
 
   delete(hero: Hero): void {
     this.heroes = this.heroes.filter(h => h !== hero);

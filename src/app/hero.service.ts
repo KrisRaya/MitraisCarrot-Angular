@@ -15,7 +15,7 @@ const httpOptions = {
 @Injectable()
 export class EmployeeService {
 
-  private heroesUrl = 'api/employee';  // URL to web api
+  private heroesUrl = 'api/employees';  // URL to web api
 
   constructor(
     private http: HttpClient,

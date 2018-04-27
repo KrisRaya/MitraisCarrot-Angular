@@ -28,13 +28,14 @@
 <div class="heroesContainer2">
   <label>Employee name:
     <input #heroName />
+    <input #heroEmail />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''">
+  <button (click)="add(heroName.value); heroName.value=''; addEmail(heroEmail.value); heroEmail.value=''">
     add
   </button>
 </div>
- 
+
 <table>
     <tr>
       <th>Id</th>
