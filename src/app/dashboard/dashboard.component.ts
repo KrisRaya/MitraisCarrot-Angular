@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { EmployeeService } from '../hero.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,14 +10,14 @@ import { HeroService } from '../hero.service';
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: EmployeeService) { }
 
   ngOnInit() {
     this.getHeroes();
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
+    this.heroService.getEmployees()
       .subscribe(heroes => this.heroes = heroes.slice(0, 5));
   }
 }

@@ -43,8 +43,8 @@
       <th>Option</th>
       <th>Delete</th>
     </tr>
-    <tr *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
-      
+
+    <tr *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">  
       <th>{{hero.id}}</th>
       <th>{{hero.name}}</th>
       <th>{{hero.email}}</th>
