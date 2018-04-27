@@ -68,10 +68,10 @@ export class EmployeeService {
   //////// Save methods //////////
 
   /** POST: add a new hero to the server */
-  addHero (hero: Hero): Observable<Hero> {
+  addEmployee (hero: Hero): Observable<Hero> {
     return this.http.post<Hero>(this.heroesUrl, hero, httpOptions).pipe(
       tap((hero: Hero) => this.log(`added emplpyee w/ id=${hero.id}`)),
-      catchError(this.handleError<Hero>('addHero'))
+      catchError(this.handleError<Hero>('addEmployee'))
     );
   }
 
