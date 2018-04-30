@@ -22,18 +22,30 @@ export class HeroesComponent implements OnInit {
     .subscribe(heroes => this.heroes = heroes);
   }
 
-  add(name: string): void {
+  // add(name: string): void {
+  //   name = name.trim();
+  //   if (!name) { return; }
+  //   this.heroService.addHero({ name } as Hero)
+  //     .subscribe(hero => {
+  //       this.heroes.push(hero);
+  //     });
+  // }
+  // addEmail(email: string): void {
+  //   email = email.trim();
+  //   if (!email) { return; }
+  //   this.heroService.addHero({ email } as Hero)
+  //     .subscribe(hero => {
+  //       this.heroes.push(hero);
+  //     });
+  // }
+
+  addNameEmail(name: string,email:string): void {
     name = name.trim();
-    if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
-      .subscribe(hero => {
-        this.heroes.push(hero);
-      });
-  }
-  addEmail(email: string): void {
     email = email.trim();
+    if (!name) { return; }
     if (!email) { return; }
-    this.heroService.addHero({ email } as Hero)
+    
+    this.heroService.addHero({ name,email } as Hero)
       .subscribe(hero => {
         this.heroes.push(hero);
       });

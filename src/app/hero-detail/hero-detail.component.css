@@ -4,9 +4,11 @@ h2{
 }
 
 div{
-    margin: 10px auto;
+  
+    margin-left:45%;
+    margin-right:80%;
     
-    width: 50%;
+   position: relative;
 }
 
 button{

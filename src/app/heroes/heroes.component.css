@@ -51,7 +51,7 @@
 
   
   h2{
-      text-align: center;
+      text-align: left;
   }
   h3{
       text-align: center;
@@ -97,8 +97,9 @@
   .heroesContainer2{
     /* margin: 0 auto; */
     /* width: 20%; */
-    left: 43%;
-    right: 43%;
+    /* left: 33%;
+    right: 30%; */
+    margin: 0 auto;
     position: relative;
     padding: 20px;
   }

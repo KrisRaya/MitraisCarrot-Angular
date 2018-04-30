@@ -24,40 +24,47 @@
 </div> -->
 
 <h2>Employee</h2>
- 
+
 <div class="heroesContainer2">
-  <label>Employee name:
+  <label>Employee name :
     <input #heroName />
+    <br> Employee Email :
     <input #heroEmail />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''; addEmail(heroEmail.value); heroEmail.value=''">
+  
+  <button (click)="addNameEmail(heroName.value,heroEmail.value); heroName.value=''; heroEmail.value=''">
     add
   </button>
 </div>
 
 <table>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Option</th>
-      <th>Delete</th>
-    </tr>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Option</th>
+    <th>Delete</th>
+  </tr>
 
-    <tr *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">  
-      <th>{{hero.id}}</th>
-      <th>{{hero.name}}</th>
-      <th>{{hero.email}}</th>
-      <a routerLink="/detail/{{hero.id}}">
-      <span > <th> <img class="option" src="../../assets/show.png" (click)="onselect(user)"/></th></span>
-      </a>
-      <th><button class="delete" title="delete employee"
-        (click)="delete(hero)">x</button></th>
-    </tr>
+  <tr *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
+    <th>{{hero.id}}</th>
+    <th>{{hero.name}}</th>
+    <th>{{hero.email}}</th>
+    <a routerLink="/detail/{{hero.id}}">
+      <span>
+        <th>
+          <img class="option" src="../../assets/show.png" (click)="onselect(user)" />
+        </th>
+      </span>
+    </a>
+    <th>
+      <button class="delete" title="delete employee" (click)="delete(hero)">x</button>
+    </th>
+  </tr>
 
-  </table>
-  
+</table>
+
 <!-- <ul class="heroes">
   <div *ngFor="let hero of heroes" class="heroesContainer">
       <li >
@@ -86,4 +93,3 @@
  
 </div> -->
 <!-- </div> -->
-
